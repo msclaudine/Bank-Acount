@@ -1,0 +1,98 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bank account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bank.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jscript.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron ">
+            <!-- <div class="panel panel-default "> -->
+            <div id="account">
+                <form id="bank">
+                    <div class="panel panel-info">
+                        <h1>Bank Account</h1>
+                        <div class="panel panel-info">
+                            <div id="fullname">
+                                <label for="names"> fullName Name:</label>
+                                <input type="text" name="names" id="full-Name">
+                            </div><br>
+
+                            <div class="acount-number">
+                                <label for="amount"> ACCOUNT NUMBER:</label>
+                                <input type="text" name="account" id="accountn">
+                            </div><br>
+                            <div class="initial-amount">
+                                <label for="amount"> OPENING AMOUNT:</label>
+                                <input type="text" name="amount" id="initial-amount">
+                            </div><br>
+                            <div class="deposit-amount">
+                                <label for="deposit"> DEPOSIT AMOUNT:</label>
+                                <input type="text" name="deposit" id="deposit-Amount">
+                            </div><br>
+                            <div class="withdraw-amount">
+                                <label for="withdraw"> WITHDRAW AMOUNT:</label>
+                                <input type="text" name="withdraw" id="withdraw-amount">
+                            </div>
+                            <br>
+                            <div>
+                                <button type="submit" class="button">Check balance</button>
+
+                            </div>
+                            <br>
+                </form>
+
+                <div class="container">
+                    <form id="deposit">
+                        <div class="panel panel-info">
+
+                            <div class="deposit-amount">
+                                <label for="deposit"> DEPOSIT AMOUNT:</label>
+                                <input type="text" name="deposit" id="deposit-Amount">
+                            </div><br>
+
+                            <button type="submit" class="button">deposit</button>
+
+                        </div>
+                        <br>
+
+                    </form>
+                </div>
+                <div class="container">
+                    <form id="deposit">
+                        <div class="panel panel-info">
+
+
+                            <div class="withdraw-amount">
+                                <label for="withdraw"> WITHDRAW AMOUNT:</label>
+                                <input type="text" name="withdraw" id="withdraw-amount">
+                            </div>
+                            <br>
+                            <div>
+                                <button type="submit" class="button">withdraw</button>
+
+                            </div>
+                            <br>
+                    </form>
+                </div>
+
+                <div class="panel-footer" id="show">
+                    <h3>CURRENT AMOUNT</h3>
+                    <p id="Balance">Rwf:</p>
+                </div>
+
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</body>
+
+</html>
