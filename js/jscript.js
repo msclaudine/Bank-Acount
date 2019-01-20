@@ -47,7 +47,7 @@ $(document).ready(function () {
         var inputAccount = $("input#accountn").val();
         var inputInitialDeposit = $("input#initial-amount").val();
         var myAccount = new Account(inputtNames, inputAccount, inputInitialDeposit);
-   console.log(myAccount);
+        $("#balance").html(myAccount);
          // $("p#balance").html(myAccount);
         // // var inputedDeposit = $("input#deposit-Amount").val();
         // // var inputedwithdraw = $("input#withdraw-amount").val();
@@ -60,10 +60,10 @@ $(document).ready(function () {
        var inputtDeposit = $("input#deposit-Amount").val();
        var accountLastBalance = account.balance + inputtDeposit;
        var lastBalance= new Account(accountLastBalance);
-        console.log(lastBalance);
+       $("#balance").html(myAccount);
     });
 
-     $("form#d").submit(function(event){
+     $("form#withdraw").submit(function(event){
         alert("ok")
         event.preventDefault();
       var inputedwithdraw = $("input#withdraw-amount").val();
