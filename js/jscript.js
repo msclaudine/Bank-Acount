@@ -7,11 +7,12 @@
 // }
 
 // var person1 = new Person(inputtNames, inputAccount);
-
+   
 function Account(names, accountN, balance) {
     this.names = names;
     this.accountN = accountN;
     this.balance = balance;
+
 }
 
 Account.prototype.withdrawMoney = function () {
@@ -32,25 +33,42 @@ Account.prototype.withdrawMoney = function () {
 Account.prototype.DepositMoney = function () {
     this.balance = balance;
     this.deposit = deposit;
-    var lastBalance = balance + deposit;
-    return (lastBalance)
+    var balance = balance + deposit;
+    return (balance)
 }
 
 
 $(document).ready(function () {
     $("form#bank").submit(function (event) {
-        event.preventDefault();
 
+        event.preventDefault();
+             alert("ok")
         var inputtNames = $("input#full-Name").val();
         var inputAccount = $("input#accountn").val();
         var inputInitialDeposit = $("input#initial-amount").val();
         var myAccount = new Account(inputtNames, inputAccount, inputInitialDeposit);
-        // console.log(myAccount)
-        // var inputedDeposit = $("input#deposit-Amount").val();
-        // var inputedwithdraw = $("input#withdraw-amount").val();
-        $("#show").show(myAccount)
+   console.log(myAccount);
+         // $("p#balance").html(myAccount);
+        // // var inputedDeposit = $("input#deposit-Amount").val();
+        // // var inputedwithdraw = $("input#withdraw-amount").val();
+       
+    });
+ 
+    $("form#deposit").submit(function(event){
+        alert("ok")
+        event.preventDefault();
+       var inputtDeposit = $("input#deposit-Amount").val();
+       var accountLastBalance = account.balance + inputtDeposit;
+       var lastBalance= new Account(accountLastBalance);
+        console.log(lastBalance);
     });
 
-
-    // $("form#deposit").submit(function(){})
+     $("form#d").submit(function(event){
+        alert("ok")
+        event.preventDefault();
+      var inputedwithdraw = $("input#withdraw-amount").val();
+       var accountLastBalance = account.balance - inputedwithdraw;
+       var myAccount= new Account(inputAccount, accountLastBalance );
+        console.log(myAccount);
+    });
 });
